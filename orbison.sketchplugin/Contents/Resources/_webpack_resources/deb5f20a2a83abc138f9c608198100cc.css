@@ -1,5 +1,3 @@
-/* some default styles to make the view more native like */
-
 html {
   box-sizing: border-box;
   background: transparent;
@@ -16,13 +14,35 @@ html {
   margin: 0;
   padding: 0;
   position: relative;
-
-  /* Prevent the content from being selectionable */
-  -webkit-user-select: none;
-  user-select: none;
 }
 
 input, textarea {
   -webkit-user-select: auto;
   user-select: auto;
+}
+
+body {
+  display: flex;
+  background: var(--color-gray-90);
+  color: var(--color-gray-10);
+  font-size: var(--size-font-s);
+  line-height: var(--size-font-m);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+.nav {
+  flex: 0 1 88px;
+}
+
+.content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-flow: column;
 }

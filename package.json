@@ -29,7 +29,11 @@
     "resources/**/*.js"
   ],
   "dependencies": {
-    "bitly-tokens": "^0.1.1-2",
+    "bitly-tokens": "^0.1.1-6",
     "sketch-module-web-view": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilikescience/orbison"
   }
 }

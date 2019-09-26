@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Orbison</title>
+    <link rel="stylesheet" href="9e8357836f9ee0ab194270a9ccddeb39.css">
+    <link rel="stylesheet" href="5c362ae6a76045c75181a312f7f0ec44.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <div class="nav--item" data-destination="grid">Grid</div>
+      <div class="nav--item" data-destination="color">Color</div>
+    </div>
+    <div class="content">
+      <div class="tab tab--grid">
+        <h2 class="tab--title">Grids</h2>
+        <div class="tab--body" id="grid--content">
+          <div class="header">
+            <div class="cell">Name</div>
+            <div class="cell">Size</div>
+            <div class="cell">Action</div>
+          </div>
+        </div>
+      </div>
+      <div class="tab tab--color">
+        <h2 class="tab--title">Colors</h2>
+        <div class="tab--body" id="color--content">
+            <div class="header">
+              <div class="cell">Name</div>
+              <div class="cell">Hex</div>
+              <div class="cell">Action</div>
+            </div>
+          </div>
+      </div>
+      <div class="tab tab--color"></div>
+    </div>
+    <!-- notice the "../" here. It's because webview.js will be compiled in a different folder -->
+    <script src="../webview.js"></script>
+  </body>
+</html>

@@ -281,7 +281,7 @@ module.exports = {
 
 /**
  * Do not edit directly
- * Generated on Tue, 24 Sep 2019 21:06:44 GMT
+ * Generated on Wed, 25 Sep 2019 20:30:12 GMT
  */
 
 module.exports = {
@@ -1283,6 +1283,23 @@ module.exports = {
       ]
     }
   },
+  "font": {
+    "sans": {
+      "value": "'Proxima Nova', 'Open Sans', Arial, sans-serif",
+      "original": {
+        "value": "'Proxima Nova', 'Open Sans', Arial, sans-serif"
+      },
+      "name": "FontSans",
+      "attributes": {
+        "category": "font",
+        "type": "sans"
+      },
+      "path": [
+        "font",
+        "sans"
+      ]
+    }
+  },
   "grid": {
     "xl": {
       "totalWidth": {
@@ -1353,21 +1370,21 @@ module.exports = {
           "gutterWidth"
         ]
       },
-      "gutterOnOutside": {
+      "guttersOutside": {
         "value": "true",
         "original": {
           "value": "true"
         },
-        "name": "GridXlGutterOnOutside",
+        "name": "GridXlGuttersOutside",
         "attributes": {
           "category": "grid",
           "type": "xl",
-          "item": "gutterOnOutside"
+          "item": "guttersOutside"
         },
         "path": [
           "grid",
           "xl",
-          "gutterOnOutside"
+          "guttersOutside"
         ]
       }
     },
@@ -1440,21 +1457,21 @@ module.exports = {
           "gutterWidth"
         ]
       },
-      "gutterOnOutside": {
+      "guttersOutside": {
         "value": "true",
         "original": {
           "value": "true"
         },
-        "name": "GridLGutterOnOutside",
+        "name": "GridLGuttersOutside",
         "attributes": {
           "category": "grid",
           "type": "l",
-          "item": "gutterOnOutside"
+          "item": "guttersOutside"
         },
         "path": [
           "grid",
           "l",
-          "gutterOnOutside"
+          "guttersOutside"
         ]
       }
     },
@@ -1527,21 +1544,21 @@ module.exports = {
           "gutterWidth"
         ]
       },
-      "gutterOnOutside": {
+      "guttersOutside": {
         "value": "true",
         "original": {
           "value": "true"
         },
-        "name": "GridMGutterOnOutside",
+        "name": "GridMGuttersOutside",
         "attributes": {
           "category": "grid",
           "type": "m",
-          "item": "gutterOnOutside"
+          "item": "guttersOutside"
         },
         "path": [
           "grid",
           "m",
-          "gutterOnOutside"
+          "guttersOutside"
         ]
       }
     },
@@ -1614,101 +1631,93 @@ module.exports = {
           "gutterWidth"
         ]
       },
-      "gutterOnOutside": {
+      "guttersOutside": {
         "value": "true",
         "original": {
           "value": "true"
         },
-        "name": "GridSGutterOnOutside",
+        "name": "GridSGuttersOutside",
         "attributes": {
           "category": "grid",
           "type": "s",
-          "item": "gutterOnOutside"
+          "item": "guttersOutside"
         },
         "path": [
           "grid",
           "s",
-          "gutterOnOutside"
+          "guttersOutside"
         ]
       }
     }
   },
   "size": {
     "font": {
-      "small": {
-        "value": "0.75rem",
-        "comment": "the small size of the font",
+      "s": {
+        "value": "16rem",
         "original": {
-          "value": "0.75",
-          "comment": "the small size of the font"
+          "value": "16"
         },
-        "name": "SizeFontSmall",
+        "name": "SizeFontS",
         "attributes": {
           "category": "size",
           "type": "font",
-          "item": "small"
+          "item": "s"
         },
         "path": [
           "size",
           "font",
-          "small"
+          "s"
         ]
       },
-      "medium": {
-        "value": "1rem",
-        "comment": "the medium size of the font",
+      "m": {
+        "value": "18rem",
         "original": {
-          "value": "1",
-          "comment": "the medium size of the font"
+          "value": "18"
         },
-        "name": "SizeFontMedium",
+        "name": "SizeFontM",
         "attributes": {
           "category": "size",
           "type": "font",
-          "item": "medium"
+          "item": "m"
         },
         "path": [
           "size",
           "font",
-          "medium"
+          "m"
         ]
       },
-      "large": {
-        "value": "2rem",
-        "comment": "the large size of the font",
+      "l": {
+        "value": "24rem",
         "original": {
-          "value": "2",
-          "comment": "the large size of the font"
+          "value": "24"
         },
-        "name": "SizeFontLarge",
+        "name": "SizeFontL",
         "attributes": {
           "category": "size",
           "type": "font",
-          "item": "large"
+          "item": "l"
         },
         "path": [
           "size",
           "font",
-          "large"
+          "l"
         ]
       },
-      "base": {
-        "value": "1rem",
-        "comment": "the base size of the font",
+      "xl": {
+        "value": "32rem",
         "original": {
-          "value": "{size.font.medium.value}",
-          "comment": "the base size of the font"
+          "value": "32"
         },
-        "name": "SizeFontBase",
+        "name": "SizeFontXl",
         "attributes": {
           "category": "size",
           "type": "font",
-          "item": "base"
+          "item": "xl"
         },
         "path": [
           "size",
           "font",
-          "base"
+          "xl"
         ]
       }
     }
@@ -4266,7 +4275,7 @@ module.exports.sendToWebview = function sendToWebview(identifier, evalString) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resources/bd062338bd98c6b935b3a0569c9ec8fa.html").path();
+module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resources/2eab441b09403face88f4e1bdfd1d65e.html").path();
 
 /***/ }),
 
@@ -4286,6 +4295,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var sketch_module_web_view_remote__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(sketch_module_web_view_remote__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var bitly_tokens__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bitly-tokens */ "./node_modules/bitly-tokens/dist/tokens.js");
 /* harmony import */ var bitly_tokens__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bitly_tokens__WEBPACK_IMPORTED_MODULE_2__);
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 
 
 
@@ -4296,24 +4313,38 @@ var webviewIdentifier = "orbison.webview";
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var options = {
     identifier: webviewIdentifier,
-    width: 240,
-    height: 180,
-    show: false
+    width: 455,
+    height: 667,
+    moveable: true,
+    remembersWindowFrame: true,
+    alwaysOnTop: true,
+    maximizable: false,
+    minimizable: false,
+    resizable: false
   };
   var browserWindow = new sketch_module_web_view__WEBPACK_IMPORTED_MODULE_0___default.a(options); // only show the window when the page has loaded to avoid a white flash
 
   browserWindow.once("ready-to-show", function () {
     browserWindow.show();
   });
-  var webContents = browserWindow.webContents; // print a message when the page loads
-
-  webContents.on("did-finish-load", function () {
-    sketch.UI.message("UI loaded!");
-  }); // add a handler for a call from web content's javascript
+  var webContents = browserWindow.webContents; // add a handler for a call from web content's javascript
 
   webContents.on("nativeLog", function (s) {
-    sketch.UI.message(s);
-    newArtboard();
+    var message = JSON.parse(s);
+    log("got message:" + message.command);
+
+    switch (message.command) {
+      case "newArtboard":
+        newArtboard.apply(void 0, _toConsumableArray(message.args));
+        break;
+
+      case "log":
+        log(message.args.toString());
+        break;
+
+      default:
+        log("i dont know how to do that");
+    }
   });
   browserWindow.loadURL(__webpack_require__(/*! ../resources/webview.html */ "./resources/webview.html"));
 }); // When the plugin is shutdown by Sketch (for example when the user disable the plugin)
@@ -4326,22 +4357,73 @@ function onShutdown() {
     existingWebview.close();
   }
 }
+/**
+ * Makes a new artboard with the correct dimensions and grid settings
+ * @param {string} size - the size of the artboard. Should be 'xl', 'l', 'm' or 's'.
+ */
 
-function newArtboard() {
+function newArtboard(size) {
+  var frameSizes = {
+    xl: {
+      width: "1440",
+      height: "900"
+    },
+    l: {
+      width: "900",
+      height: "800"
+    },
+    m: {
+      width: "600",
+      height: "800"
+    },
+    s: {
+      width: "375",
+      height: "667"
+    }
+  };
+  var layoutSettings = bitly_tokens__WEBPACK_IMPORTED_MODULE_2___default.a.grid[size];
   var artboard = new sketch.Artboard({
-    name: 'Bitly - XL',
+    name: "Bitly - ".concat(size.toUpperCase()),
     parent: sketch.fromNative(context.document).selectedPage,
     frame: {
-      width: 1440,
-      height: 900
+      width: frameSizes[size].width,
+      height: frameSizes[size].height
     }
   });
   var layout = MSLayoutGrid.alloc().init();
-  layout.setNumberOfColumns(bitly_tokens__WEBPACK_IMPORTED_MODULE_2___default.a.grid.xl.numberOfColumns.value);
+  layout.setNumberOfColumns(layoutSettings.numberOfColumns.value);
+  layout.setTotalWidth(layoutSettings.totalWidth.value);
+  layout.setHorizontalOffset((artboard.frame.width - layoutSettings.totalWidth.value) / 2);
+  layout.setGuttersOutside(layoutSettings.guttersOutside.value === "true" ? 1 : 0);
+  layout.setGutterWidth(layoutSettings.gutterWidth.value);
+  layout.setColumnWidth(layoutSettings.columnWidth.value);
   artboard.sketchObject.setLayout(layout);
-  log(artboard.sketchObject);
-  log(bitly_tokens__WEBPACK_IMPORTED_MODULE_2___default.a.grid.xl.numberOfColumns);
-}
+} // function createPalettes() {
+//   let colorAssets = []
+//   for (let color in tokens.color) {
+//     for (let value in tokens.color[color]) {
+//       const thisColor = tokens.color[color][value].value;
+//       const colorObj = hexToRgb(thisColor);
+//       colorName = `${tokens.color[color][value].category}-${tokens.color[color][value].type}-${tokens.color[color][value].item}`;
+//       const mscolor = MSColor.colorWithRed_green_blue_alpha(
+//         colorPalette[i].red,
+//         colorPalette[i].green,
+//         colorPalette[i].blue,
+//         colorPalette[i].alpha
+//       );
+//       colorAssets.push(MSColorAsset.alloc().initWithAsset_name(mscolor, colorName));
+//     }
+//   }
+// }
+// function hexToRgb(hex) {
+//   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+//   return result ? {
+//     red: parseInt(result[1], 16),
+//     green: parseInt(result[2], 16),
+//     blue: parseInt(result[3], 16),
+//     alpha: 1
+//   } : null;
+// }
 
 /***/ }),
 

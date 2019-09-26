@@ -25,5 +25,5 @@
   "name": "Orbison",
   "identifier": "Orbison",
   "disableCocoaScriptPreprocessor": true,
-  "appcast": "https://raw.githubusercontent.com//master/.appcast.xml"
+  "appcast": "https://raw.githubusercontent.com/ilikescience/orbison/master/.appcast.xml"
 }
