@@ -60,15 +60,15 @@ h4 {
   height: 25px;
 }
 
-.nav--item:not(.nav--active):hover {
+.nav--item:hover {
   background-color: var(--color-gray-70);
 }
 
-.nav--active {
+.nav--current {
   background-color: var(--color-blue-50);
 }
 
-.nav--active .nav--icon svg {
+.nav--current .nav--icon svg {
   fill: var(--color-pure-white);
 }
 

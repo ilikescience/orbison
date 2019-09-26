@@ -47,13 +47,8 @@ const buildColorList = colors => {
       newRow.innerHTML = `
       <div class="cell capitalize">
         <div class="swatch" style="background-color:${thisColor.value}"></div>
-        hi</div>
+        ${thisColor.attributes.type} ${thisColor.attributes.item}</div>
       <div class="cell">${thisColor.value}</div>
-      <div class="cell">
-        <div class="button" data-command="copyColor" data-args="${thisColor.value}">
-          Add
-        </div>
-      </div>
       `;
       gridTabContent.appendChild(newRow);
     }
@@ -73,3 +68,17 @@ document.querySelectorAll(".action").forEach(item => {
     window.postMessage("nativeLog", JSON.stringify(message));
   });
 });
+
+document.querySelectorAll(".nav--item").forEach(item => {
+  item.addEventListener("click", event => {
+    const currentTab = document.querySelector('.tab--active');
+    const currentNav = document.querySelector('.nav--active');
+    const newNav = event.target.closest('.nav--item');
+    const dest = newNav.dataset.destination;
+    const newTab = document.querySelector(`.tab--${dest}`);
+    currentNav.classList.remove('nav--active');
+    currentTab.classList.remove('tab--active');
+    newNav.classList.add('nav--active');
+    newTab.classList.add('tab--active');
+  })
+})

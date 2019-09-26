@@ -281,7 +281,7 @@ module.exports = {
 
 /**
  * Do not edit directly
- * Generated on Wed, 25 Sep 2019 20:30:12 GMT
+ * Generated on Thu, 26 Sep 2019 19:41:23 GMT
  */
 
 module.exports = {
@@ -1234,53 +1234,59 @@ module.exports = {
           "navy"
         ]
       },
-      "orannge": {
+      "orange": {
         "value": "#ee6123",
         "original": {
           "value": "#EE6123"
         },
-        "name": "ColorBrandOrannge",
+        "name": "ColorBrandOrange",
         "attributes": {
           "category": "color",
           "type": "brand",
-          "item": "orannge"
+          "item": "orange"
         },
         "path": [
           "color",
           "brand",
-          "orannge"
+          "orange"
         ]
       }
     },
-    "black": {
-      "value": "#000000",
-      "original": {
-        "value": "#000000"
+    "pure": {
+      "black": {
+        "value": "#000000",
+        "original": {
+          "value": "#000000"
+        },
+        "name": "ColorPureBlack",
+        "attributes": {
+          "category": "color",
+          "type": "pure",
+          "item": "black"
+        },
+        "path": [
+          "color",
+          "pure",
+          "black"
+        ]
       },
-      "name": "ColorBlack",
-      "attributes": {
-        "category": "color",
-        "type": "black"
-      },
-      "path": [
-        "color",
-        "black"
-      ]
-    },
-    "white": {
-      "value": "#ffffff",
-      "original": {
-        "value": "#ffffff"
-      },
-      "name": "ColorWhite",
-      "attributes": {
-        "category": "color",
-        "type": "white"
-      },
-      "path": [
-        "color",
-        "white"
-      ]
+      "white": {
+        "value": "#ffffff",
+        "original": {
+          "value": "#ffffff"
+        },
+        "name": "ColorPureWhite",
+        "attributes": {
+          "category": "color",
+          "type": "pure",
+          "item": "white"
+        },
+        "path": [
+          "color",
+          "pure",
+          "white"
+        ]
+      }
     }
   },
   "font": {
@@ -4275,7 +4281,7 @@ module.exports.sendToWebview = function sendToWebview(identifier, evalString) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resources/2eab441b09403face88f4e1bdfd1d65e.html").path();
+module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resources/56e33277e9b86a68ab4bf290d08ee760.html").path();
 
 /***/ }),
 
@@ -4313,7 +4319,7 @@ var webviewIdentifier = "orbison.webview";
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var options = {
     identifier: webviewIdentifier,
-    width: 455,
+    width: 425,
     height: 667,
     moveable: true,
     remembersWindowFrame: true,
@@ -4340,6 +4346,10 @@ var webviewIdentifier = "orbison.webview";
 
       case "log":
         log(message.args.toString());
+        break;
+
+      case "colors":
+        createPalettes();
         break;
 
       default:
@@ -4398,32 +4408,33 @@ function newArtboard(size) {
   layout.setGutterWidth(layoutSettings.gutterWidth.value);
   layout.setColumnWidth(layoutSettings.columnWidth.value);
   artboard.sketchObject.setLayout(layout);
-} // function createPalettes() {
-//   let colorAssets = []
-//   for (let color in tokens.color) {
-//     for (let value in tokens.color[color]) {
-//       const thisColor = tokens.color[color][value].value;
-//       const colorObj = hexToRgb(thisColor);
-//       colorName = `${tokens.color[color][value].category}-${tokens.color[color][value].type}-${tokens.color[color][value].item}`;
-//       const mscolor = MSColor.colorWithRed_green_blue_alpha(
-//         colorPalette[i].red,
-//         colorPalette[i].green,
-//         colorPalette[i].blue,
-//         colorPalette[i].alpha
-//       );
-//       colorAssets.push(MSColorAsset.alloc().initWithAsset_name(mscolor, colorName));
-//     }
-//   }
-// }
-// function hexToRgb(hex) {
-//   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-//   return result ? {
-//     red: parseInt(result[1], 16),
-//     green: parseInt(result[2], 16),
-//     blue: parseInt(result[3], 16),
-//     alpha: 1
-//   } : null;
-// }
+}
+
+function createPalettes() {
+  var colorAssets = [];
+
+  for (var color in bitly_tokens__WEBPACK_IMPORTED_MODULE_2___default.a.color) {
+    for (var value in bitly_tokens__WEBPACK_IMPORTED_MODULE_2___default.a.color[color]) {
+      var thisColor = bitly_tokens__WEBPACK_IMPORTED_MODULE_2___default.a.color[color][value].value;
+      var colorObj = hexToRgb(thisColor);
+      var colorName = "".concat(bitly_tokens__WEBPACK_IMPORTED_MODULE_2___default.a.color[color][value].attributes.type, "-").concat(bitly_tokens__WEBPACK_IMPORTED_MODULE_2___default.a.color[color][value].attributes.item);
+      var mscolor = MSColor.colorWithRed_green_blue_alpha(colorObj.red, colorObj.green, colorObj.blue, colorObj.alpha);
+      colorAssets.push(MSColorAsset.alloc().initWithAsset_name(mscolor, colorName));
+    }
+  }
+
+  context.document.documentData().assets().addColorAssets(colorAssets);
+}
+
+function hexToRgb(hex) {
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result ? {
+    red: parseInt(result[1], 16) / 255,
+    green: parseInt(result[2], 16) / 255,
+    blue: parseInt(result[3], 16) / 255,
+    alpha: 1
+  } : null;
+}
 
 /***/ }),
 

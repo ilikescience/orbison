@@ -29,7 +29,7 @@
     "resources/**/*.js"
   ],
   "dependencies": {
-    "bitly-tokens": "^0.1.1-6",
+    "bitly-tokens": "^0.1.1-10",
     "sketch-module-web-view": "^3.0.1"
   },
   "repository": {

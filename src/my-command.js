@@ -8,7 +8,7 @@ const webviewIdentifier = "orbison.webview";
 export default function() {
   const options = {
     identifier: webviewIdentifier,
-    width: 455,
+    width: 425,
     height: 667,
     moveable: true,
     remembersWindowFrame: true,
@@ -37,6 +37,9 @@ export default function() {
         break;
       case "log":
         log(message.args.toString());
+        break;
+      case "colors":
+        createPalettes();
         break;
       default:
         log("i dont know how to do that");
@@ -103,30 +106,31 @@ function newArtboard(size) {
   artboard.sketchObject.setLayout(layout);
 }
 
-// function createPalettes() {
-//   let colorAssets = []
-//   for (let color in tokens.color) {
-//     for (let value in tokens.color[color]) {
-//       const thisColor = tokens.color[color][value].value;
-//       const colorObj = hexToRgb(thisColor);
-//       colorName = `${tokens.color[color][value].category}-${tokens.color[color][value].type}-${tokens.color[color][value].item}`;
-//       const mscolor = MSColor.colorWithRed_green_blue_alpha(
-//         colorPalette[i].red,
-//         colorPalette[i].green,
-//         colorPalette[i].blue,
-//         colorPalette[i].alpha
-//       );
-//       colorAssets.push(MSColorAsset.alloc().initWithAsset_name(mscolor, colorName));
-//     }
-//   }
-// }
+function createPalettes() {
+  let colorAssets = []
+  for (let color in tokens.color) {
+    for (let value in tokens.color[color]) {
+      const thisColor = tokens.color[color][value].value;
+      const colorObj = hexToRgb(thisColor);
+      const colorName = `${tokens.color[color][value].attributes.type}-${tokens.color[color][value].attributes.item}`;
+      const mscolor = MSColor.colorWithRed_green_blue_alpha(
+        colorObj.red,
+        colorObj.green,
+        colorObj.blue,
+        colorObj.alpha
+      );
+      colorAssets.push(MSColorAsset.alloc().initWithAsset_name(mscolor, colorName));
+    }
+  }
+  context.document.documentData().assets().addColorAssets(colorAssets);
+}
 
-// function hexToRgb(hex) {
-//   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-//   return result ? {
-//     red: parseInt(result[1], 16),
-//     green: parseInt(result[2], 16),
-//     blue: parseInt(result[3], 16),
-//     alpha: 1
-//   } : null;
-// }
+function hexToRgb(hex) {
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result ? {
+    red: parseInt(result[1], 16) / 255,
+    green: parseInt(result[2], 16) / 255,
+    blue: parseInt(result[3], 16) / 255,
+    alpha: 1
+  } : null;
+}
