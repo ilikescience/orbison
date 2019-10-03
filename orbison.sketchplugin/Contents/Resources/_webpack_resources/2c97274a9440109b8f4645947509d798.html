@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Orbison</title>
+    <link rel="stylesheet" href="3d9e1dad620e39f918dd2bffe279a9d0.css">
+    <link rel="stylesheet" href="f0fcc1e6769e124da6dbe5220f9e8a74.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <div class="nav--item nav--active" data-destination="grid">
+        <div class="nav--icon" data-destination="grid">
+            <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" data-destination="grid"><path d="M16 0v25H9V0h7zM7 0v25H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3h4zm15 0a3 3 0 0 1 3 3v19a3 3 0 0 1-3 3h-4V0h4zm-8 2h-3v21h3V2zM5 2H3a1 1 0 0 0-1 1v19a1 1 0 0 0 1 1h2V2zm17 0h-2v21h2a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z" data-destination="grid" fill-rule="nonzero"/></svg>
+        </div>
+      </div>
+      <div class="nav--item" data-destination="color">
+          <div class="nav--icon" data-destination="colors">
+              <svg width="25" height="19" viewBox="0 0 25 19" xmlns="http://www.w3.org/2000/svg" data-destination="colors"><path d="M9 18.5a9 9 0 1 0 0-18 9 9 0 0 0 0 18zm0-2a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm7 2a9 9 0 1 0 0-18 9 9 0 0 0 0 18z" fill-rule="nonzero" data-destination="colors"/></svg>
+          </div>
+      </div>
+      <div class="nav--item" data-destination="notes">
+          <div class="nav--icon" data-destination="notes">
+              <svg width="9" height="16" viewBox="0 0 9 16" xmlns="http://www.w3.org/2000/svg" data-destination="notes"><path d="M5.938 3.66H2.983V.707h2.954V3.66zM8.163 16H.828v-2.18h2.414V7.27H.828V5.078h4.84v8.742h2.496V16z" fill-rule="nonzero" data-destination="notes"/></svg>
+          </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="tab tab--grid tab--active">
+        <h2 class="tab--title">Grids</h2>
+        <div class="tab--body" id="grid--content">
+          <div class="header">
+            <div class="cell">Name</div>
+            <div class="cell">Size</div>
+            <div class="cell">Action</div>
+          </div>
+        </div>
+      </div>
+      <div class="tab tab--color">
+        <h2 class="tab--title">Colors</h2>
+        <div class="button action" data-command="colors" data-args="">Add all colors</div>
+        <div class="tab--body" id="color--content">
+            <div class="header">
+              <div class="cell">Name</div>
+              <div class="cell">Hex</div>
+            </div>
+          </div>
+      </div>
+      <div class="tab tab--notes">
+          <h2 class="tab--title">Release notes</h2>
+          <div class="tab--container">
+            <h3>v0.1</h3>
+            <p>Our first release! Contains functionality for adding colors and grids.</p>
+          </div>
+        </div>
+    </div>
+    <!-- notice the "../" here. It's because webview.js will be compiled in a different folder -->
+    <script src="../webview.js"></script>
+  </body>
+</html>
