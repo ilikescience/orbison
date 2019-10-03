@@ -1,7 +1,7 @@
 {
   "name": "orbison",
   "description": "A Sketch plugin for Bitly's product design system",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "engines": {
     "sketch": ">=3.0"
   },
